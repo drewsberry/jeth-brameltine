@@ -1,0 +1,7 @@
+.*.swp
+.*.swo
+*~
+.vimsession
+node_modules
+output
+.dropbox
