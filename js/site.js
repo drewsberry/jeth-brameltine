@@ -1,4 +1,4 @@
-// Copyright © 2016 - Drew Silcock
+// Copyright © 2018 - Drew Silcock
 
 'use strict';
 

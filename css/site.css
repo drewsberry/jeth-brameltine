@@ -2,8 +2,8 @@
 
 /* https://coolors.co/9debff-ff99ff-007ea7-003249-ccdbdc */
 
-/* Hannah's Pink: #ffaaaa */
-/* Andy's Blue:  #b7f0ff */
+/* James's Burgundy: #ff3072 */
+/* Beth's Pink:  #ff9ce5 */
 
 html,
 body {
@@ -71,7 +71,7 @@ body.sp-auth-complete {
 .hp-navbar.navbar .navbar-nav>li>.hp-navlink:focus {
   /* I don't like using 'important', but it's needed here to
    * overcome the tweening, which applies style inline. */
-  color: #ffe059 !important;
+  color: #ff9ce5 !important;
 }
 
 .hp-navbar.navbar .navbar-nav>.hp-brand {
@@ -117,7 +117,7 @@ body.sp-auth-complete {
 .hp-brand.navbar-brand.ds-logo::after {
   font-size: inherit;
   border-width: 4px;
-  border-color: #ffe059;
+  border-color: #ff9ce5;
   padding-top: inherit;
 }
 
@@ -264,10 +264,8 @@ header {
   font-size: 75pt;
 }
 
-.hp-header__title-drew {
-  /*color: #0a0a7f;*/
-  /*color: #ffe059;*/
-  color: #4747ff;
+.hp-header__title-first {
+  color: #ff3072;
 
   position: relative;
   right: 50px;
@@ -283,8 +281,8 @@ header {
   right: 115px;
 }
 
-.hp-header__title-ellen {
-  color: #ffe059;
+.hp-header__title-second {
+  color: #ff9ce5;
 
   display: block;
   position: relative;
@@ -411,11 +409,11 @@ header {
 }
 
 .hp-timeline .timeline li:nth-child(odd) .timeline-badge {
-  background: #4747ff;
+  background: #ff3072;
 }
 
 .hp-timeline .timeline li:nth-child(even) .timeline-badge {
-  background: #ffe059;
+  background: #ff9ce5;
 }
 
 .hp-timeline .timeline li .timeline-badge::after {
@@ -634,7 +632,7 @@ header {
 
 .hp-button:hover,
 .hp-button:focus {
-  background: #4747ff;
+  background: #ff3072;
 }
 
 .hp-back-to-top {
@@ -712,7 +710,7 @@ header {
 .ds-prev-section:focus,
 .ds-next-section:hover,
 .ds-next-section:focus {
-  color: #ffe059;
+  color: #ff9ce5;
   background: none;
 }
 
