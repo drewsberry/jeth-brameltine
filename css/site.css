@@ -117,7 +117,6 @@ body.sp-auth-complete {
 .hp-brand.navbar-brand.ds-logo::after {
   font-size: inherit;
   border-width: 4px;
-  border-color: #ff9ce5;
   padding-top: inherit;
 }
 
@@ -198,27 +197,27 @@ header {
 
 .ds-slideshow__slide:nth-child(1) {
   animation-delay: 0s;
-  background-image: url(../images/hero-1.jpg);
+  background-image: url(../images/whatsapp/Photo_3.jpg);
 }
 .ds-slideshow__slide:nth-child(2) {
   animation-delay: 12s;
-  background-image: url(../images/hero-2.jpg);
+  background-image: url(../images/whatsapp/Photo_5.jpg);
 }
 .ds-slideshow__slide:nth-child(3) {
   animation-delay: 24s;
-  background-image: url(../images/hero-3.jpg);
+  background-image: url(../images/whatsapp/Photo_8.jpg);
 }
 .ds-slideshow__slide:nth-child(4) {
   animation-delay: 36s;
-  background-image: url(../images/hero-4.jpg);
+  background-image: url(../images/whatsapp/Photo_9.jpg);
 }
 .ds-slideshow__slide:nth-child(5) {
   animation-delay: 48s;
-  background-image: url(../images/hero-5.jpg);
+  background-image: url(../images/whatsapp/Photo_12.jpg);
 }
 .ds-slideshow__slide:nth-child(6) {
   animation-delay: 60s;
-  background-image: url(../images/hero-6.jpg);
+  background-image: url(../images/whatsapp/Photo_14.jpg);
 }
 
 .hp-header {
@@ -265,7 +264,9 @@ header {
 }
 
 .hp-header__title-first {
-  color: #ff3072;
+  /*color: #ff3072;*/
+  color: #fbcbcb;
+  text-shadow: 0 1px 2px rgb(255, 156, 156);
 
   position: relative;
   right: 50px;
@@ -283,6 +284,8 @@ header {
 
 .hp-header__title-second {
   color: #ff9ce5;
+  color: #f3c8e8;
+  text-shadow: 0 1px 2px rgb(255, 156, 229);
 
   display: block;
   position: relative;
@@ -409,11 +412,11 @@ header {
 }
 
 .hp-timeline .timeline li:nth-child(odd) .timeline-badge {
-  background: #ff3072;
+  background: #ff9696;
 }
 
 .hp-timeline .timeline li:nth-child(even) .timeline-badge {
-  background: #ff9ce5;
+  background: #ff74d0;
 }
 
 .hp-timeline .timeline li .timeline-badge::after {
@@ -564,7 +567,7 @@ header {
 }
 
 .ds-logo::before {
-  content: 'D';
+  content: 'J';
   padding-top: 25px;
   font-size: 75pt;
 
@@ -582,12 +585,12 @@ header {
   -webkit-box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
 
-  border: 8px solid #1b5a75;
+  border: 8px solid #fbcbcb;
   z-index: 1;
 }
 
 .ds-logo::after {
-  content: 'E';
+  content: 'B';
   padding-top: 25px;
   font-size: 75pt;
 
@@ -605,7 +608,7 @@ header {
   -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.5);
   -moz-box-shadow: 0 0 4px rgba(0,0,0,0.5);
 
-  border: 8px solid #1b5a75;
+  border: 8px solid #f3c8e8;
   z-index: 1;
 }
 
@@ -620,7 +623,7 @@ header {
 /* ==== Back to Top Button ==== */
 
 .hp-button {
-  background: #0a0a7f;
+  background: #ff74d0;
   border: #9dEbff;
 
   transition: background .2s ease-in-out;
@@ -632,7 +635,7 @@ header {
 
 .hp-button:hover,
 .hp-button:focus {
-  background: #ff3072;
+  background: #f52dab;
 }
 
 .hp-back-to-top {
@@ -751,14 +754,14 @@ header {
 }
 
 /* Change the background colour of the tiles. */
-.flip-clock-wrapper ul li a div div.inn {
-  background-color: #0a0a7f;
-  color: white;
+.ds-countdown.flip-clock-wrapper ul li a div div.inn {
+  background-color: #ff9bdd;
+  color: #ffe9e9;
   text-shadow: 0 1px 2px #2d2d2d;
 }
 
 /* Override colour of colons. */
-.flip-clock-dot {
+.ds-countdown .flip-clock-dot {
   background: white;
   box-shadow: 0 0 5px 1px black;
 }
@@ -918,7 +921,7 @@ header {
   height: 100%;
   display: inline-block;
 
-  background: url(../images/couple-1.jpg) -20px / cover no-repeat;
+  background: url(../images/whatsapp/Photo_1.jpg) 0 -60px / cover no-repeat;
 }
 
 #ds-about .ds-countdown__container {
@@ -926,7 +929,7 @@ header {
 }
 
 #ds-gift-list .hp-layout__image {
-  background-image: url(../images/couple-2.jpg);
+  background-image: url(../images/whatsapp/Photo_19.jpg);
   border-radius: 50px;
 }
 
