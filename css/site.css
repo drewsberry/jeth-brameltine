@@ -325,6 +325,10 @@ header {
   float: right;
 }
 
+.hp-section-title__emoji {
+  font-style: normal;
+}
+
 /* Section paragraph style */
 .hp-section-paragraph {
   font-size: large;
