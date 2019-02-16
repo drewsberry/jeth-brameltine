@@ -335,6 +335,10 @@ header {
   font-size: large;
 }
 
+.hp-address .hp-address_phone-number {
+  font-style: italic;
+}
+
 /* ==== Timeline ==== */
 
 .hp-timeline__section-title {
