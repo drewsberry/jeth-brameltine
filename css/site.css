@@ -47,8 +47,10 @@ body.sp-auth-complete {
   border-bottom: 1px solid rgba(230, 230, 230, 0);
 }
 
-.navbar-header {
-  width: 140px;
+@media (min-width: 768px) {
+  .navbar-header {
+    width: 140px;
+  }
 }
 
 .hp-navbar.navbar > .container {
@@ -291,6 +293,22 @@ header {
   position: relative;
   left: 120px;
   bottom: 30px;
+}
+
+@media (max-width: 475px) {
+  .hp-header__inner {
+    top: 20vh;
+  }
+
+  .hp-header__title-first,
+  .hp-header__title-second,
+  .hp-header__title-ampersand {
+    display: block;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
 }
 
 /* Leading text below header. */
