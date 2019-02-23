@@ -437,6 +437,12 @@ header {
   float: right;
 }
 
+@media (max-width: 767px) {
+  .hp-timeline .timeline li:nth-child(odd) .timeline-panel {
+    float: right;
+  }
+}
+
 .hp-timeline .timeline li:nth-child(odd) .timeline-badge {
   background: #ff9696;
 }
