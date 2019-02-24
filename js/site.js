@@ -25,7 +25,7 @@ function initialiseCountdown() {
 function initialiseScrollers() {
   const $scrollers = $('.hp-scroller');
 
-  $scrollers.each(function (index, element) {
+  $scrollers.each(function (_index, element) {
     const $element = $(element);
     const scrollToSelector = $element.data('scroll-to');
     const $scrollToElement = $(scrollToSelector);
@@ -42,9 +42,10 @@ function initialisePaginators() {
   const $prevPaginators = $('.ds-prev-section');
   const $nextPaginators = $('.ds-next-section');
 
+  const $navbar = $('#ds-navbar');
   const $sections = $('.hp-section');
 
-  $prevPaginators.each(function setupClickEvent(index, element) {
+  $prevPaginators.each(function setupClickEvent(_index, element) {
     const $element = $(element);
     const $currentSection = $element.parents('.hp-section');
     const sectionIndex = $sections.index($currentSection);
@@ -54,15 +55,17 @@ function initialisePaginators() {
     } else {
       const $target = $sections.eq(sectionIndex - 1);
 
+      const navbarHeight = $navbar.height();
+
       $element.on('click', function animateToNextSection() {
         $('html,body').animate({
-          scrollTop: $target.offset().top,
+          scrollTop: $target.offset().top - height,
         }, 'slow', 'easeInOutSine');
       });
     }
   });
 
-  $nextPaginators.each(function setupClickEvent(index, element) {
+  $nextPaginators.each(function setupClickEvent(_index, element) {
     const $element = $(element);
     const $currentSection = $element.parents('.hp-section');
     const sectionIndex = $sections.index($currentSection);
@@ -129,8 +132,6 @@ function initialiseScrollMagic() {
   const navbarCollapseSelector = '.hp-navbar.navbar .navbar-collapse';
   const navbarLinkSelector = '.hp-navbar.navbar .navbar-nav > li > .hp-navlink';
   const navbarLogoSelector = '.hp-navbar.navbar .hp-brand.ds-logo';
-  const navbarLogoPseudoSelector = navbarLogoSelector + '::before,' +
-                                   navbarLogoSelector + '::after';
   const navbarTextSelector = navbarLinkSelector + ',' + navbarLogoSelector;
 
   const $navbar = $(navbarSelector);

@@ -742,20 +742,20 @@ header {
 
 /* ==== Paginator buttons ==== */
 
-.ds-prev-section__container,
 .ds-next-section__container {
   width: 100%;
-  position: absolute;
   text-align: center;
   font-size: 50pt;
 }
 
-.ds-prev-section__container {
-  top: 100px;
+/* First button on hero slide is an exception that requires manual placing. */
+.hp-header .ds-next-section__container {
+  position: absolute;
+  bottom: 0;
 }
 
-.ds-next-section__container {
-  bottom: 0;
+.ds-prev-section__container {
+  top: 100px;
 }
 
 .ds-prev-section,
@@ -781,7 +781,7 @@ header {
 }
 
 .hp-section__content {
-  padding: 75px 0;
+  padding: 60px 0 0;
 }
 
 .hp-section:last-child {
@@ -793,9 +793,6 @@ header {
 
 .ds-countdown__container {
   text-align: center;
-
-  position: relative;
-  top: 320px;
 }
 
 .ds-countdown {
@@ -807,6 +804,10 @@ header {
   font-family: 'Parisienne', cursive;
   font-size: large;
   z-index: 10; /* Put above countdown numbers. */
+}
+
+.ds-countdown.flip-clock-wrapper ul {
+  background: #fb9bdd;
 }
 
 /* Change the background colour of the tiles. */
@@ -824,7 +825,7 @@ header {
 
 /* ==== FlipClock Size ==== */
 
-@media (min-width: 575px) {
+@media (min-width: 581px) {
   .ds-countdown .flip-clock-divider.days .flip-clock-label {
       right: -122px;
   }
@@ -839,7 +840,7 @@ header {
 }
 
 /* Medium-sized screens. */
-@media (max-width: 575px) {
+@media (max-width: 581px) {
   .flip-clock-wrapper ul {
     width: 40px;
     height: 78px;
@@ -875,7 +876,7 @@ header {
 }
 
 /* Small-sized screens. */
-@media (max-width: 370px) {
+@media (max-width: 399px) {
   .flip-clock-wrapper ul {
     width: 20px;
     height: 58px;
@@ -910,6 +911,10 @@ header {
     top: 15px;
   }
 
+  .flip-clock-wrapper .flip-clock-dot.bottom {
+    bottom: 15px;
+  }
+
   .ds-countdown .flip-clock-divider.days .flip-clock-label {
     right: -71px;
   }
@@ -920,6 +925,14 @@ header {
 
   .ds-countdown .flip-clock-divider.minutes .flip-clock-label {
     right: -67px;
+  }
+}
+
+/* Very small screens (*cough* iPhone SE *cough*) */
+@media (max-width: 329px) {
+  .flip-clock-wrapper ul {
+    width: 10px;
+    padding: 13px;
   }
 }
 
@@ -959,14 +972,11 @@ header {
 }
 
 #ds-about .hp-welcome {
-  position: relative;
-  top: 80px;
+  margin-top: 80px;
 }
 
 #ds-about .ds-picture__container {
-  position: relative;
-  top: 100px;
-  width: 100%;
+  margin-top: 20px;
   height: 250px;
   text-align: center;
 }
@@ -981,7 +991,7 @@ header {
 }
 
 #ds-about .ds-countdown__container {
-  top: 170px;
+  margin-top: 40px;
 }
 
 #ds-gift-list .hp-layout__image {
