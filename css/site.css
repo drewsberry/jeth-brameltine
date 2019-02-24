@@ -122,8 +122,32 @@ body.sp-auth-complete {
   padding-top: inherit;
 }
 
-.hp-navbar.navbar > .container > .navbar-collapse {
-  float: right;
+.hp-navbar.navbar .navbar-header .navbar-toggle {
+  background-color: transparent;
+  border-color: #f3c8e8;
+  border-width: 2px;
+}
+
+.hp-navbar.navbar .navbar-header .navbar-toggle .icon-bar {
+  background-color: #f3c8e8;
+}
+
+.hp-navbar.navbar .navbar-collapse {
+  margin-top: 20px;
+  border-color: #f3c8e8;
+  background-color: rgba(16, 16, 16, 0.5);
+}
+
+@media (min-width: 768px) {
+  .hp-navbar.navbar > .container > .navbar-collapse {
+    float: right;
+  }
+
+  /* Override the background colour tween for mobile devices when navbar isn't separate drop-down menu.*/
+  .hp-navbar.navbar .navbar-collapse {
+    /* I know important isn't good practice but it's needed here to override the JS-applied styles on scroll. */
+    background-color: transparent !important;
+  }
 }
 
 /* ==== Main Content ==== */
@@ -994,6 +1018,7 @@ header {
 
   font-family: 'Parisienne', cursive;
   font-weight: bold;
+  background-color: inherit;
 }
 
 @media (max-width: 400px) {

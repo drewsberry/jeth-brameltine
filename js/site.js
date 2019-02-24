@@ -124,8 +124,10 @@ function initialiseReveal() {
 function initialiseScrollMagic() {
   const controller = new ScrollMagic.Controller();
 
-  const navbarSelector = '.navbar.hp-navbar';
-  const navbarLinkSelector = '.hp-navbar.navbar .navbar-nav>li>.hp-navlink';
+  const navbarSelector = '.hp-navbar.navbar';
+  const navbarToggleSelector = '.hp-navbar.navbar .navbar-header .navbar-toggle';
+  const navbarCollapseSelector = '.hp-navbar.navbar .navbar-collapse';
+  const navbarLinkSelector = '.hp-navbar.navbar .navbar-nav > li > .hp-navlink';
   const navbarLogoSelector = '.hp-navbar.navbar .hp-brand.ds-logo';
   const navbarLogoPseudoSelector = navbarLogoSelector + '::before,' +
                                    navbarLogoSelector + '::after';
@@ -141,8 +143,7 @@ function initialiseScrollMagic() {
       },
       ease: Circ.easeOutExpo,
     });
-
-  const navbarBackgroundScene = new ScrollMagic
+  new ScrollMagic
     .Scene({
       triggerElement: 0,
       duration: 400,
@@ -152,6 +153,40 @@ function initialiseScrollMagic() {
     .setTween(navbarBackgroundTween)
     .addTo(controller);
 
+  const navbarToggleBackgroundTween = new TimelineMax()
+    .to(navbarToggleSelector, 1, {
+      css: {
+        backgroundColor: 'rgba(245, 245, 245, 0.9)',
+      },
+      ease: Circ.easeOutExpo,
+    });
+  new ScrollMagic
+    .Scene({
+      triggerElement: 0,
+      duration: 400,
+      triggerHook: 1,
+      offset: 0,
+    })
+    .setTween(navbarToggleBackgroundTween)
+    .addTo(controller);
+
+  const navbarCollapseBackgroundTween = new TimelineMax()
+    .to(navbarCollapseSelector, 1, {
+      css: {
+        backgroundColor: 'transparent',
+      },
+      ease: Circ.easeOutExpo,
+    });
+  new ScrollMagic
+    .Scene({
+      triggerElement: 0,
+      duration: 400,
+      triggerHook: 1,
+      offset: 0,
+    })
+    .setTween(navbarCollapseBackgroundTween)
+    .addTo(controller);
+
   const navbarBorderTween = new TimelineMax()
     .to(navbarSelector, 1, {
       css: {
@@ -159,8 +194,7 @@ function initialiseScrollMagic() {
       },
       ease: Circ.easeOutExpo,
     });
-
-  const navbarBorderScene = new ScrollMagic
+  new ScrollMagic
     .Scene({
       triggerElement: '#ds-about',
       duration: 50,
@@ -177,8 +211,7 @@ function initialiseScrollMagic() {
       },
       ease: Circ.easeOutExpo,
     });
-
-  const navbarTextScene = new ScrollMagic
+  new ScrollMagic
     .Scene({
       triggerElement: 0,
       duration: 400,
@@ -198,8 +231,7 @@ function initialiseScrollMagic() {
       },
       ease: Circ.easeOutExpo,
     });
-
-  const navbarLogoSizeScene = new ScrollMagic
+  new ScrollMagic
     .Scene({
       triggerElement: 0,
       duration: 400,
